@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-import Footer from "../Reusable Components/Footer";
+import Footer from '../Reusable Components/Footer';
 import Bgtext from "./assets/TextBg.jpeg";
 import TruckBg from "./assets/TruckBg.jpeg";
 

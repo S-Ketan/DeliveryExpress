@@ -6,7 +6,7 @@ import Card1 from "./assets/Card1.jpeg";
 import Card2 from "./assets/Card2.jpeg";
 import Card3 from "./assets/Card3.jpeg";
 
-import Footer from "../Reusable Components/Footer";
+import Footer from '../Reusable Components/Footer';
 
 export default function Services() {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -12,8 +12,8 @@ import CardBg8 from "./assets/CardBg8.png";
 import CardBg9 from "./assets/CardBg9.png";
 
 import LongCardBg from "./assets/LongCardBg.jpg";
-import Card from "../Reusable Components/CardComponents";
-import Footer from "../Reusable Components/Footer";
+import Card from '../Reusable Components/CardComponents';
+import Footer from '../Reusable Components/Footer';
 
 const InfoCard = ({ image, title, description }) => (
   <Card image={image} title={title} description={description} />
