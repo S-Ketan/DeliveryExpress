@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import Logo from "./assets/Logo.jpeg";
-import { auth, db } from "../userProfile/services/firebase";
-import { signOut, onAuthStateChanged } from "firebase/auth";
-import { getDoc, doc } from "firebase/firestore";
+
+
 
 const Navbar = React.memo(() => {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ const Navbar = React.memo(() => {
     setSidebarOpen(!isSidebarOpen);
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         try {
@@ -36,7 +35,7 @@ const Navbar = React.memo(() => {
 
     return () => unsubscribe();
   }, []);
-
+ */
   useEffect(() => {
     setSidebarOpen(false);
   }, [location]);
@@ -44,24 +43,26 @@ const Navbar = React.memo(() => {
   const handlePageChange = (page) => setSelectedPage(page);
 
   const handleLogout = async () => {
-    try {
+    /* try {
       await signOut(auth);
       console.log("User logged out");
     } catch (error) {
       console.error("Error logging out: ", error.message);
-    }
+    } */
+   console.log("User logged out");
+   
   };
 
   const handleLogin = () => navigate("/login");
   const handleRegister = () => navigate("/register");
 
-  if (loading) {
+ /*  if (loading) {
     return (
       <div className="w-full h-[10vh] border-b-2 flex items-center justify-center">
-        <p>Loading...</p> {/* Show loading message */}
+        <p>Loading...</p> 
       </div>
     );
-  }
+  } */
 
   return (
     <div className="w-full h-[10vh] border-b-2">
